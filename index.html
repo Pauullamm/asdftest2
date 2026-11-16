@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Post Allowances Search</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f5f7;
+            margin: 0;
+            padding: 50px 20px;
+            color: #263746;
+        }
+
+        .container {
+            max-width: 520px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 3px 15px rgba(0,0,0,.08);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #183b56;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 9px;
+            font-weight: bold;
+        }
+
+        input {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd2d9;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 18px;
+            padding: 12px 22px;
+            background: #245b85;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #194567;
+        }
+
+        .note {
+            margin-top: 18px;
+            color: #687783;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Post Allowances Search</h2>
+
+        <p>Enter a post name to search the allowances database.</p>
+
+        <form method="POST"
+              action="https://allowances.state.gov/web920/location_post_action.asp"
+              target="_blank">
+
+            <label for="postName">Post Name</label>
+
+            <input
+                type="text"
+                id="postName"
+                name="PostName"
+                placeholder="Enter post name..."
+                required
+            >
+
+            <button type="submit">Search Allowances</button>
+        </form>
+
+        <div class="note">
+            Search for post-specific allowances information.
+        </div>
+    </div>
+</body>
+</html>
